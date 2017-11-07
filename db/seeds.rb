@@ -29,3 +29,4 @@ the server is restarted
 </p>},
                image_url: 'talk.png',
                price: 28.00)
+

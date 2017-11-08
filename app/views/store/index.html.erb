@@ -1,0 +1,28 @@
+  <div class="container">
+    <p id="notice"><%= notice %></p>
+    <h1>Your Awesome E-store Catalog</h1>
+  </div>
+  <% cache @products do %>
+      <% @products.each do |product| %>
+          <% cache product do %>
+      <div class="container">
+        <div class="row">
+        <div class="col-md-4">
+         <div class="panel panel-success">
+          <div class="panel-heading">
+            <h3><%= product.title %></h3>
+          </div>
+          <div class="panel-body">
+            <%= image_tag(product.image_url) %>
+          </div>
+          <div class="panel-footer">
+            <%= sanitize(product.description) %>
+          </div>
+          <span class="btn btn-success btn-block"><%= number_to_currency(product.price) %></span>
+         </div>
+        </div>
+        </div>
+      </div>
+       <% end %>
+      <% end %>
+<% end %>

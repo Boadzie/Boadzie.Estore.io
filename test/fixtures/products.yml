@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  description: MyText
-  image_url: MyString
-  price: 9.99
+  title: Seven Mobile Apps in Seven Weeks
+  description: Native Apps, Multiple Platforms</em>The awesome App platform.
+  image_url: kids.png
+  price: 26.0
 
 two:
-  title: MyString
-  description: MyText
-  image_url: MyString
-  price: 9.99
+  title: Talking Man
+  description: <em>Talking Man</em> The talking man.
+  image_url: talk.png
+  price: 28.0

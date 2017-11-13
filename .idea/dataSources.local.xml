@@ -2,10 +2,25 @@
 <project version="4">
   <component name="dataSourceStorageLocal">
     <data-source name="Rails E-store: test" uuid="4ccadd12-8730-4e35-99b9-bc417e21d824">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <database-info product="SQLite" version="3.16.1" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" />
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <auth-required>false</auth-required>
+      <introspection-schemas>*:main</introspection-schemas>
     </data-source>
     <data-source name="Rails E-store: development" uuid="a2f5ee2c-5baf-4f48-bc95-2431c4023d33">
+      <database-info product="SQLite" version="3.16.1" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" />
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <auth-required>false</auth-required>
+      <introspection-schemas>*:main</introspection-schemas>
+    </data-source>
+    <data-source name="postgres@localhost" uuid="1cdce7e9-258d-47ce-b797-595991a96bbe">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <secret-storage>master_key</secret-storage>
+      <first-sync>true</first-sync>
+    </data-source>
+    <data-source name="identifier.sqlite" uuid="63886b0a-2f70-4f95-b678-b6f1540f8808">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <secret-storage>master_key</secret-storage>
       <auth-required>false</auth-required>
       <first-sync>true</first-sync>
     </data-source>

@@ -11,10 +11,10 @@
               <%= image_tag(product.image_url, :class => "image-size") %>
                 <h5 class="bold"><%= product.title %></h5>
                 <%= sanitize(product.description) %>
-              <span class="btn btn-success btn-block"><%= number_to_currency(product.price) %></span>
+              <span class="btn btn-success"><%= number_to_currency(product.price) %></span>
+              <span id="dp"><%= button_to 'Add to Cart', line_items_path(product_id: product), class: "btn btn-success"%></span>
             </div>
           <% end %>
         </div>
-       <% end %>
+          <% end %>
      </div>
-

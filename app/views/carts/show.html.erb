@@ -1,0 +1,12 @@
+<div class="container">
+<p id="notice"><%= notice %></p>
+<h2>Your Awesome Cart</h2>
+
+ <div class="col-md-6">
+  <ul class="list-group">
+    <% @cart.line_items.each do |item| %>
+        <li class="list-group-item bg-success"><%= item.quantity %> &times; <%= item.product.title %></li>
+    <% end %>
+  </ul>
+ </div>
+</div>

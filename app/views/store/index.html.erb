@@ -4,7 +4,7 @@
         <p id="notice"><%= notice %></p>
         <h1><i class="fa fa-shopping-cart"></i> Buy Your Awesome Phones</h1>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6" id="cart">
         <% if @cart %>
             <%= render @cart %>
         <% end %>
@@ -22,7 +22,7 @@
                 <h5 class="bold"><%= product.title %></h5>
                 <%= sanitize(product.description) %>
               <span class="btn btn-success"><%= number_to_currency(product.price) %></span>
-              <span id="dp"><%= button_to 'Add to Cart', line_items_path(product_id: product), class: "btn btn-success"%></span>
+              <span id="dp"><%= button_to 'Add to Cart', line_items_path(product_id: product), remote:true, class: "btn btn-success"%></span>
             </div>
           <% end %>
         </div>

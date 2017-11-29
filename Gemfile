@@ -13,8 +13,6 @@ gem 'rails', '~> 5.1.4'
 gem 'sqlite3', group: [:development,:test]
 # postgres for production
 gem 'pg', group: :production
-# 12 factor for heroku
-gem 'rails_12factor', group: :production
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
 gem 'bootstrap-sass'

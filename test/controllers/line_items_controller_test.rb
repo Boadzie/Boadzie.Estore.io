@@ -41,6 +41,16 @@ class LineItemsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to line_item_url(@line_item)
   end
 
+  test "should create line_item via ajax" do
+    assert_difference('LineItem.count') do
+      post line_items_url, params: { product_id: products(:Apple).id }, xhr: true
+    end
+    assert_response :success
+    assert_select_jquery :html, '#cart' do
+      assert_select 'tr#current_item td', /Apple 6/
+    end
+  end
+
   test "should destroy line_item" do
     assert_difference('LineItem.count', -1) do
       delete line_item_url(@line_item)

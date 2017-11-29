@@ -49,6 +49,7 @@ class LineItemsController < ApplicationController
         format.json { render :show, status: :ok, location: @line_item }
       else
         format.html { render :edit }
+        format.js { @current_item = @line_item }
         format.json { render json: @line_item.errors, status: :unprocessable_entity }
       end
     end

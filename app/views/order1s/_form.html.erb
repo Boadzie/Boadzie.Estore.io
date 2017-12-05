@@ -1,0 +1,40 @@
+<div class="container" >
+  <%= form_with(model: order1, local: true) do |form| %>
+    <% if order1.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(order1.errors.count, "error") %> prohibited this order1 from being saved:</h2>
+
+        <ul>
+        <% order1.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+  <div class="col-md-6">
+    <div class="field">
+      <%= form.label :name %>
+      <%= form.text_field :name, id: :order1_name, class:"form-control" %>
+    </div>
+
+    <div class="field">
+      <%= form.label :address %>
+      <%= form.text_area :address, id: :order1_address, class:"form-control" %>
+    </div>
+
+    <div class="field">
+      <%= form.label :email %>
+      <%= form.text_field :email, id: :order1_email, class:"form-control" %>
+    </div>
+
+    <div class="field">
+      <%= form.label :pay_type %>
+      <%= form.number_field :pay_type, id: :order1_pay_type , class:"form-control"%>
+    </div>
+
+    <div class="actions">
+      <%= form.submit 'Place Order', class:"btn btn-success" %>
+    </div>
+  </div>
+  <% end %>
+</div>

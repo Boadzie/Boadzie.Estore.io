@@ -1,0 +1,26 @@
+<div class="container">
+    <p id="notice"><%= notice %></p>
+
+    <p>
+      <strong>Name:</strong>
+      <%= @order1.name %>
+    </p>
+
+    <p>
+      <strong>Address:</strong>
+      <%= @order1.address %>
+    </p>
+
+    <p>
+      <strong>Email:</strong>
+      <%= @order1.email %>
+    </p>
+
+    <p>
+      <strong>Pay type:</strong>
+      <%= @order1.pay_type %>
+    </p>
+
+    <%= link_to 'Edit', edit_order1_path(@order1),  class:"btn btn-success" %> |
+    <%= link_to 'Back', order1s_path, class:"btn btn-success" %>
+</div>
